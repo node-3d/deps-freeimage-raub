@@ -1,11 +1,11 @@
 {
 	"extends": [
-        "eslint:recommended",
-        "plugin:node/recommended"
-    ],
-    "parserOptions": {
-        "ecmaVersion": 2020
-    },
+		"eslint:recommended",
+		"plugin:node/recommended"
+	],
+	"parserOptions": {
+		"ecmaVersion": 2020
+	},
 	"overrides": [
 		{
 			"files": [

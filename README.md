@@ -9,9 +9,6 @@ This is a part of [Node3D](https://github.com/node-3d) project.
 npm i deps-freeimage-raub
 ```
 
-
-## Synopsis
-
 This dependency package is distributing **FreeImage 3.18**
 binaries through **NPM** for **Node.js** addons.
 
