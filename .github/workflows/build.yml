@@ -80,15 +80,10 @@ jobs:
         if: matrix.os != 'windows-2022'
         run: node src/build-unix
 
-      - name: Build Windows GLEW
+      - name: Build Windows
         if: matrix.os == 'windows-2022'
         shell: cmd
-        run: src/windows-glew.cmd
-
-      - name: Build Windows GLFW
-        if: matrix.os == 'windows-2022'
-        shell: cmd
-        run: src/windows-glfw.cmd
+        run: src/windows.cmd
 
       - name: Build Post Step
         run: node src/build-post
