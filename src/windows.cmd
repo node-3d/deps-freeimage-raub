@@ -1,21 +1,4 @@
-echo 'FreeImage Build Started'
+msbuild /p:Platform=x64 /p:Configuration=Release /p:PlatformToolset=v142 src\FreeImage\FreeImage.2013.vcxproj
 
-cd src
-rd /s /q "FreeImage"
-tar -xf FreeImage3180.zip
-
-rd /s /q "build"
-mkdir build
-
-cd FreeImage
-msbuild /p:Platform=x64 /p:Configuration=Release /p:PlatformToolset=v142 FreeImage.2013.vcxproj
-
-cd ..
-dir
-
-copy /y FreeImage\Dist\x64\FreeImage.dll build\FreeImage.dll
-copy /y FreeImage\Dist\x64\FreeImage.lib build\FreeImage.lib
-
-cd ..
-
-echo 'FreeImage Build Finished'
+copy /y src\FreeImage\Dist\x64\FreeImage.dll src\build\FreeImage.dll
+copy /y src\FreeImage\Dist\x64\FreeImage.lib src\build\FreeImage.lib
