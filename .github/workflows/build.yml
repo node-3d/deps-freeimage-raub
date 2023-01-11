@@ -47,7 +47,7 @@ jobs:
     name: Build
     strategy:
         matrix:
-          os: [ubuntu-20.04, windows-2022, macos-11, [self-hosted, linux, ARM64]]
+          os: [ubuntu-20.04, windows-2019, macos-11, [self-hosted, linux, ARM64]]
 
     runs-on: ${{ matrix.os }}
 
@@ -68,18 +68,18 @@ jobs:
         run: npm ci --ignore-scripts
 
       - name: Add msbuild to PATH
-        if: matrix.os == 'windows-2022'
+        if: matrix.os == 'windows-2019'
         uses: microsoft/setup-msbuild@v1.1
 
       - name: Build Pre Step
         run: chmod +x src/extract.sh && src/extract.sh
 
       - name: Build Unix
-        if: matrix.os != 'windows-2022'
+        if: matrix.os != 'windows-2019'
         run: node src/build-unix
 
       - name: Build Windows
-        if: matrix.os == 'windows-2022'
+        if: matrix.os == 'windows-2019'
         shell: cmd
         run: src/windows.cmd
 
