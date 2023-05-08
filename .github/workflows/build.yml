@@ -25,7 +25,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.12.1
+          node-version: 18.16.0
           cache: 'npm'
 
       - name: Get Package Version
@@ -47,7 +47,7 @@ jobs:
     name: Build
     strategy:
         matrix:
-          os: [ubuntu-20.04, windows-2019, macos-11, [self-hosted, linux, ARM64]]
+          os: [ubuntu-20.04, windows-2022, macos-11, [self-hosted, linux, ARM64]]
 
     runs-on: ${{ matrix.os }}
 
@@ -61,25 +61,27 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.12.1
+          node-version: 18.16.0
           cache: 'npm'
 
       - name: Install Modules
         run: npm ci --ignore-scripts
 
       - name: Add msbuild to PATH
-        if: matrix.os == 'windows-2019'
-        uses: microsoft/setup-msbuild@v1.1
+        if: matrix.os == 'windows-2022'
+        uses: microsoft/setup-msbuild@v1.3.1
+        with:
+          msbuild-architecture: x64
 
       - name: Build Pre Step
         run: chmod +x src/extract.sh && src/extract.sh
 
       - name: Build Unix
-        if: matrix.os != 'windows-2019'
+        if: matrix.os != 'windows-2022'
         run: node src/build-unix
 
       - name: Build Windows
-        if: matrix.os == 'windows-2019'
+        if: matrix.os == 'windows-2022'
         shell: cmd
         run: src/windows.cmd
 
