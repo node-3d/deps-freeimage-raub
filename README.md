@@ -3,10 +3,11 @@
 This is a part of [Node3D](https://github.com/node-3d) project.
 
 [![NPM](https://badge.fury.io/js/deps-freeimage-raub.svg)](https://badge.fury.io/js/deps-freeimage-raub)
-[![CodeFactor](https://www.codefactor.io/repository/github/node-3d/deps-freeimage-raub/badge)](https://www.codefactor.io/repository/github/node-3d/deps-freeimage-raub)
+[![ESLint](https://github.com/node-3d/deps-freeimage-raub/actions/workflows/eslint.yml/badge.svg)](https://github.com/node-3d/deps-freeimage-raub/actions/workflows/eslint.yml)
+[![Test](https://github.com/node-3d/deps-freeimage-raub/actions/workflows/test.yml/badge.svg)](https://github.com/node-3d/deps-freeimage-raub/actions/workflows/test.yml)
 
 ```
-npm i deps-freeimage-raub
+npm i -s deps-freeimage-raub
 ```
 
 This dependency package is distributing **FreeImage 3.18**
@@ -15,8 +16,6 @@ binaries through **NPM** for **Node.js** addons.
 * Platforms (x64): Windows x64, Linux x64, OSX x64, Linux Aarch64.
 * Library: FreeImage.
 
-
-## Usage
 
 ### JS Interface
 
