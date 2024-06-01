@@ -6,14 +6,14 @@ This is a part of [Node3D](https://github.com/node-3d) project.
 [![ESLint](https://github.com/node-3d/deps-freeimage-raub/actions/workflows/eslint.yml/badge.svg)](https://github.com/node-3d/deps-freeimage-raub/actions/workflows/eslint.yml)
 [![Test](https://github.com/node-3d/deps-freeimage-raub/actions/workflows/test.yml/badge.svg)](https://github.com/node-3d/deps-freeimage-raub/actions/workflows/test.yml)
 
-```
+```console
 npm i -s deps-freeimage-raub
 ```
 
 This dependency package is distributing **FreeImage 3.18**
 binaries through **NPM** for **Node.js** addons.
 
-* Platforms (x64): Windows x64, Linux x64, OSX x64, Linux Aarch64.
+* Platforms (x64): Windows x64, Linux x64, Linux Aarch64, MacOS x64, MacOS ARM.
 * Library: FreeImage.
 
 
