@@ -9,7 +9,7 @@
 		export DYLIB_INSTALL_NAME_BASE=@rpath
 		make -f Makefile.osx \
 			CPP_arm64='g++ -std=c++11 -w' \
-			CC_arm64='gcc -std=c89 -w' \
+			CC_arm64='gcc -std=c99 -w' \
 			>/dev/null
 	)
 
