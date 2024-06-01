@@ -8,7 +8,7 @@
 		
 		export DYLIB_INSTALL_NAME_BASE=@rpath
 		make -f Makefile.osx \
-			libfreeimage-3.18.0.dylib-arm64
+			libfreeimage-3.18.0.dylib-arm64 \
 			>/dev/null
 	)
 	
