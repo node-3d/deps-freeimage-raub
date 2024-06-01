@@ -1,7 +1,7 @@
 {
 	"author": "Luis Blanco <luisblanco1337@gmail.com>",
 	"name": "deps-freeimage-raub",
-	"version": "4.2.0",
+	"version": "5.0.0",
 	"description": "Binaries and headers for FreeImage-dependent compilation",
 	"license": "MIT",
 	"main": "index.js",
