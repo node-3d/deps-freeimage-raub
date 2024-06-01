@@ -10,6 +10,7 @@
 		make -f Makefile.osx \
 			>/dev/null
 	)
-
-	mv FreeImage/libfreeimage-3.18.0.dylib-arm64 build/freeimage.dylib
+	
+	>&2 ls FreeImage
+	mv FreeImage/libfreeimage-3.18.0.dylib build/freeimage.dylib
 )
